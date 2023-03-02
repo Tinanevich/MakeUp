@@ -14,16 +14,16 @@
         <div class="container top-container">
             <div class="container">
                 <div class="row">
-                    <div class="navbar-header"> 
+                    <div class="navbar-header">
                         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-3 mb-3 bg-white border-bottom">
                             <h5 class="my-0 mr-md-auto font-weight-normal">Makeup</h5>
                             <nav position="absolute" class="my-2 my-md-0 mr-md-3">
-                                <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
+                                <a class="p-2 text-dark" href="{% url 'index' %}">Home</a>
                                 <a class="p-2 text-dark" href="{% url 'price' %}">Price</a>
                                 <a class="p-2 text-dark" href="{% url 'comments' %}">Comments</a>
                             </nav>
                         </div>
-                    </div>                 
+                    </div>
                     <div class="container top-container">
                             <div class="row">
                                 <div class="col-lg-4 col-lg-offset-1">
@@ -35,15 +35,14 @@
                                             {{ form.phone }}<br>
                                             <div>
                                                 <button type="submit" class="btn btn-outline-danger">Call me</button>
-                                            </div>    
+                                            </div>
                                             <span>{{error}}</span>
-                                        </form> 
-                                            
+                                        </form>
                                 </div>
-                            </div>    
-                        </div>       
-                    </div>       
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> 
-        </div> 
-    </div>                 
+            </div>
+        </div>
+    </div>

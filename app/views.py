@@ -12,29 +12,29 @@ def home(request):
             form.save()
             return redirect('/price')
         else:
-            error = 'Data is not correct!'    
+            error = 'Data is not correct!'
     form = CustomerForm()
     dict = {
         'form': form,
         'error': error
     }
-    return render(request, 'home.html', dict)
+    return render(request, 'index.html', dict)
 
 
 def price(request):
     return render(request, 'price.html')
 
 def comments(request):
-    error = '' 
+    error = ''
     if request.method == 'POST':
         form = CommentsForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
     form = CommentsForm()
-    text = Comments.objects.order_by('-id')       
+    text = Comments.objects.order_by('-id')
     dict = {
         'form': form,
         'text': text,
         'error': error,
-    }   
-    return render(request, 'recorded.html', dict)    
+    }
+    return render(request, 'recorded.html', dict)

@@ -1,7 +1,7 @@
 from .models import Customer, Comments
 from django.forms import ModelForm, TextInput, Textarea
- 
-    
+
+
 class CustomerForm(ModelForm):
     class Meta:
         model = Customer
@@ -14,9 +14,9 @@ class CustomerForm(ModelForm):
             "phone": TextInput(attrs={
             'class': 'form-control',
             'placeholder': 'Enter your number',
-            }),  
+            }),
         }
-                
+
 class CommentsForm(ModelForm):
     class Meta:
         model = Comments
@@ -31,4 +31,3 @@ class CommentsForm(ModelForm):
                 'placeholder': 'Enter your comment'
                 }),
             }
-       
